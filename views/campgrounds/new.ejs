@@ -1,0 +1,63 @@
+<% include ../partials/header.ejs %>
+
+<p class="h1 text-center">Submit a new Ad. </p>
+
+<!-- <div class="row"> -->
+    <form class="form mx-auto bg-light" action="/campgrounds" method="post">
+    <div class="form-group">
+      <label for="adTitle">Ad Title</label>
+      <input class="form-control" type="text" name="adTitle" placeholder="Title">
+    </div>
+    <div class="form-group">
+      <label for="image">ImageUrl</label>
+        <input class="form-control" type="text" name="image" placeholder="imageURL">
+    </div>
+    <div class="form-group">
+      <label for="image">Price</label>
+        <input class="form-control" type="number" name="price"  placeholder="Price">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+        <textarea class="form-control" type="text" name="description" placeholder="Description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select name="category">
+        <option value="Hard Drive">Hard Drive</option>
+        <option value="Books">Books</option>
+        <option value="Stationary">Stationary</option>
+        <option value="X-videos" selected>X-videos</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+        <input class="form-control" type="text" name="name" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+      <label for="contactNumber">Contact Number</label>
+        <input class="form-control" type="number" name="contactNumber" placeholder="Contact Num">
+    </div>
+
+    <div class="form-group">
+      <label for="college">College/University</label>
+        <select name="college">
+          <option value="Dr. Jivraj Mehta Institute of Technology">Dr. Jivraj Mehta Institute of Technology</option>
+          <option value="Dr. Jivraj Mehta Institute of Technology">Dr. Jivraj Mehta Institute of Technology</option>
+          <option value="Dr. Jivraj Mehta Institute of Technology">Dr. Jivraj Mehta Institute of Technology</option>
+          <option value="Dr. Jivraj Mehta Institute of Technology">Dr. Jivraj Mehta Institute of Technology</option>
+          <option value="other">Other..</option>
+
+        </select>
+      </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+<!-- </div> -->
+
+
+
+  <a class="btn btn-lg" href="/campgrounds">Go back</a>
+<% include ../partials/footer.ejs %>

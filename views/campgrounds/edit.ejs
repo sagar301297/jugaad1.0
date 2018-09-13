@@ -1,0 +1,66 @@
+<% include ../partials/header.ejs %>
+
+<p class="h1 text-center">Edit <%=campground.name%> Campground </p>
+
+<!-- <div class="row"> -->
+    <form class="form mx-auto bg-light" action="/campgrounds/<%=campground._id%>?_method=PUT" method="post" style="width:50%">
+      <div class="form-group">
+        <label for="campground[adTitle]">Ad Title</label>
+        <input class="form-control" type="text" name="campground[adTitle]" value="<%=campground.adTitle%>">
+      </div>
+      <div class="form-group">
+        <label for="campground[image]">ImageUrl</label>
+          <input class="form-control" type="text" name="campground[image]" value="<%=campground.image%>">
+      </div>
+      <div class="form-group">
+        <label for="campground[price]">Price</label>
+          <input class="form-control" type="number" name="campground[price]"  value="<%=campground.price%>">
+      </div>
+      <div class="form-group">
+        <label for="campground[description]">Description</label>
+          <textarea class="form-control" type="text" name="campground[description]"><%=campground.description%></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="campground[category]">Category</label>
+        <select name="campground[category">
+          <option value="<%=campground.category%>" selected><%=campground.category%></option>
+          <option value="Hard Drive">Hard Drive</option>
+          <option value="Books">Books</option>
+          <option value="Stationary">Stationary</option>
+          <option value="X-videos">X-videos</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="campground[name]">Name</label>
+          <input class="form-control" type="text" name="campground[name]" value="<%=campground.name%>">
+      </div>
+
+      <div class="form-group">
+        <label for="campground[contactNumber]">Contact Number</label>
+          <input class="form-control" type="number" name="campground[contactNumber]" value="<%=campground.contactNumber%>">
+      </div>
+
+      <div class="form-group">
+        <label for="campground[college]">College/University</label>
+          <select name="campground[college]">
+            <option selected value="<%=campground.college%>"><%=campground.college%></option>
+            <option value="Dr. Jivraj Mehta Institute of Technology">Dr. Jivraj Mehta Institute of Technology</option>
+            <option value="Dr. Jivraj Mehta Institute of Technology">Dr. Jivraj Mehta Institute of Technology</option>
+            <option value="Dr. Jivraj Mehta Institute of Technology">Dr. Jivraj Mehta Institute of Technology</option>
+            <option value="Dr. Jivraj Mehta Institute of Technology">Dr. Jivraj Mehta Institute of Technology</option>
+            <option value="other">Other..</option>
+
+          </select>
+        </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+
+    </form>
+<!-- </div> -->
+
+
+
+  <a class="btn btn-lg" href="/campgrounds">Go back</a>
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,32 @@
+<% include ../partials/header.ejs %>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6 py-2">
+          <p>title <%=campground.adTitle%></p>
+          <p>category <%=campground.category%></p>
+          <p>description <%=campground.description%></p>
+          <img src="<%=campground.image%>" width="20%">
+          <p>Name <%=campground.name%></p>
+          <p>phone Number <%=campground.contactNumber%></p>
+          <p>College <%=campground.college%></p>
+        </div>
+      </div>
+          <div class="py-3">
+            <%if(currentUser && campground.author.id.equals(currentUser._id)){%>
+              <a href="/campgrounds/<%=campground._id%>/edit" class="btn btn-outline-warning">
+                Edit
+              </a>
+              <form class="d-inline" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="post">
+                <button type="submit" class="btn btn-outline-danger">Delete</button>
+              </form>
+            <%}%>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<% include ../partials/footer.ejs %>
